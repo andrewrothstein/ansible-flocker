@@ -1,0 +1,4 @@
+---
+# vars file for flocker
+flocker_venv_python : 'python{{flocker_pyver_major}}.{{flocker_pyver_minor}}'
+flocker_cli_whl : '{{flocker_cli_mirror}}/Flocker-{{flocker_ver}}-py{{flocker_pyver_major}}-none-any.whl'

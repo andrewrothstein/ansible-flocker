@@ -1,0 +1,10 @@
+---
+- name: (Debian) install deps...
+  apt: name={{item}} state=latest
+  with_items:
+    - gcc
+    - libffi-dev
+    - libssl-dev
+    - python2.7
+    - python2.7-dev
+    - python-virtualenv

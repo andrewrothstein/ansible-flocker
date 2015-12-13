@@ -1,0 +1,10 @@
+---
+- name: (RedHat) install deps...
+  yum: name={{item}} state=latest
+  with_items:
+    - gcc
+    - libffi-devel
+    - openssl-devel
+    - python
+    - python-devel
+    - python-virtualenv

@@ -1,0 +1,22 @@
+---
+- name: (RedHat) dependenies...
+  when: ansible_os_family == "RedHat"
+  include: RedHat-deps.yml
+
+- name: (Debian) dependencies...
+  when: ansible_os_family == "Debian"
+  include: Debian-deps.yml
+
+- name: (pip) upgrade pip
+  pip: >
+    name=pip
+    state=latest
+    virtualenv=/opt/flocker-cli-{{flocker_ver}}
+#    virtualenv_python={{flocker_venv_python}}
+  
+- name: (pip) installing flocker-cli
+  pip: >
+    name={{flocker_cli_whl}}
+    state=latest
+    virtualenv=/opt/flocker-cli-{{flocker_ver}}
+#    virtualenv_python={{flocker_venv_python}}

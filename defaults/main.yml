@@ -1,0 +1,6 @@
+---
+# defaults file for flocker
+flocker_ver : '1.8'
+flocker_cli_mirror : 'https://clusterhq-archive.s3.amazonaws.com/python'
+flocker_pyver_major : '2'
+flocker_pyver_minor : '7'
