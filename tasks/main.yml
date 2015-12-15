@@ -12,11 +12,9 @@
     name=pip
     state=latest
     virtualenv=/opt/flocker-cli-{{flocker_ver}}
-#    virtualenv_python={{flocker_venv_python}}
   
 - name: (pip) installing flocker-cli
   pip: >
     name={{flocker_cli_whl}}
     state=latest
     virtualenv=/opt/flocker-cli-{{flocker_ver}}
-#    virtualenv_python={{flocker_venv_python}}
